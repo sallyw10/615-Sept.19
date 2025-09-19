@@ -1,0 +1,37 @@
+---
+title: "Sept.19"
+format: pdf
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+students <- read.csv("Student_Dataset_Assignment.txt", sep=' ')
+```
+
+```{r}
+df <- data.frame(ToothGrowth)
+head(df)
+```
+
+```{r}
+library(ggplot2)
+ggplot(ToothGrowth, aes(x = factor(dose), y = len, fill = supp)) +
+  geom_boxplot() +
+  labs( 
+    title = "ToothGrowth Dataset",
+    x = "Does",
+    y = "Tooth Length"
+  )
+```
+
+```{r}
+?ToothGrowth
+```
+
+The ToothGrowth dataset records the effect of Vitamin C on tooth growth in guinea pigs. It compares two supplement types: orange juice (OJ) and vitamin C (VC) across three dosage levels (0.5, 1, and 2 mg). The boxplot shows that tooth length increases with higher doses. At lower doses, orange juice tends to produce longer teeth than vitamin C, but at the highest dose, both supplements lead to similar growth.
+
+
